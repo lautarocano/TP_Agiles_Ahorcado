@@ -2,7 +2,21 @@
 
 namespace Clases
 {
-    public class Class1
+    public class JuegoAhorcado
     {
+
+        public string nombreJugador;
+        public bool setName(string nombre)
+        {
+            if (nombre == "")
+            {
+                return false;
+            }
+            else { 
+                this.nombreJugador = nombre;
+                return true;
+            }
+        }
+
     }
 }

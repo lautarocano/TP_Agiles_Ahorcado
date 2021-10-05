@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Clases;
 
 namespace TestUnitarios
 {
@@ -6,8 +7,12 @@ namespace TestUnitarios
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void IngresarNombreVacio()
         {
+            JuegoAhorcado game = new JuegoAhorcado();
+            string nombre = "";
+            Assert.AreNotEqual(game.setName(nombre),true);
         }
+
     }
 }
