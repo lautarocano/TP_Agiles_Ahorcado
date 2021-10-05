@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Clases
 {
@@ -6,16 +7,41 @@ namespace Clases
     {
 
         public string nombreJugador;
-        public bool setName(string nombre)
+        private string palabraSecreta;
+        public JuegoAhorcado()
         {
-            if (nombre == "")
+            this.palabraSecreta = "hola";
+        }
+
+        
+
+        public string setName(string nombre)
+        {
+            if (nombre == "" || nombre.Length > 20  || !nombre.All(char.IsLetterOrDigit))
             {
-                return false;
+                return "Nombre invalido";
             }
             else { 
                 this.nombreJugador = nombre;
-                return true;
+                return "Nombre valido";
             }
+        }
+
+        public string arriesgarPalabra(string palabra)
+        {
+            if(string.IsNullOrWhiteSpace(palabra))
+            {
+                return "Palabra invalida";
+            }
+            else if(palabra == this.palabraSecreta){
+                return "Palabra correcta";
+
+            }
+            else
+            {
+                return "Palabra incorrecta";
+            }
+
         }
 
     }
