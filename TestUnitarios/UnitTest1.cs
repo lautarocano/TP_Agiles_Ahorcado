@@ -44,7 +44,6 @@ namespace TestUnitarios
             JuegoAhorcado game = new JuegoAhorcado();
             game.setName("Martin");
             Assert.AreEqual(game.arriesgarPalabra(""), "Palabra invalida");
-
         }
 
         [TestMethod]
@@ -53,18 +52,65 @@ namespace TestUnitarios
             JuegoAhorcado game = new JuegoAhorcado();
             game.setName("Martin");
             Assert.AreEqual(game.arriesgarPalabra("derrota"), "Palabra incorrecta");
-
         }
 
         [TestMethod]
         public void ArriesgarPalabraCorrecta()
         {
-            JuegoAhorcado game = new JuegoAhorcado();
+            JuegoAhorcado game = new JuegoAhorcado("Adios");
             game.setName("Martin");
-            Assert.AreEqual(game.arriesgarPalabra("hola"), "Palabra correcta");
-
+            Assert.AreEqual(game.arriesgarPalabra("Adios"), "Palabra correcta");
         }
 
+        [TestMethod]
+        public void ArriesgarEspacioBlanco()
+        {
+            JuegoAhorcado game = new JuegoAhorcado("Adios");
+            game.setName("Martin");
+            Assert.AreEqual(game.arriesgarLetra(' '), false);
+        }
+
+        [TestMethod]
+        public void ArriesgarNumero()
+        {
+            JuegoAhorcado game = new JuegoAhorcado("Adios");
+            game.setName("Martin");
+            Assert.AreEqual(game.arriesgarLetra('3'), false);
+        }
+
+        [TestMethod]
+        public void ArriesgarLetraValida()
+        {
+            JuegoAhorcado game = new JuegoAhorcado("Adios");
+            game.setName("Martin");
+            Assert.AreEqual(game.arriesgarLetra('d'), true);
+        }
+
+
+        [TestMethod]
+        public void ArriesgarLetraIncorrecta()
+        {
+            JuegoAhorcado game = new JuegoAhorcado("Adios");
+            game.setName("Martin");
+            Assert.AreEqual(game.validarLetra('z'), "Letra incorrecta");
+        }
+
+        [TestMethod]
+        public void ArriesgarLetraCorrecta()
+        {
+            JuegoAhorcado game = new JuegoAhorcado("Adios");
+            game.setName("Martin");
+            Assert.AreEqual(game.validarLetra('d'), "Acierto");
+        }
+
+
+        [TestMethod]
+        public void ArriesgarLetraCorrectaNoCaseSensitive()
+        {
+            JuegoAhorcado game = new JuegoAhorcado("Adios");
+            game.setName("Martin");
+            Assert.AreEqual(game.validarLetra('D'), "Acierto");
+        }
 
     }
 }

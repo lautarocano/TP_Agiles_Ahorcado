@@ -13,6 +13,10 @@ namespace Clases
             this.palabraSecreta = "hola";
         }
 
+        public JuegoAhorcado(string palabraAsignada)
+        {
+            this.palabraSecreta = palabraAsignada.ToLower();
+        }
         
 
         public string setName(string nombre)
@@ -33,7 +37,7 @@ namespace Clases
             {
                 return "Palabra invalida";
             }
-            else if(palabra == this.palabraSecreta){
+            else if(palabra.ToLower() == this.palabraSecreta){
                 return "Palabra correcta";
 
             }
@@ -41,7 +45,38 @@ namespace Clases
             {
                 return "Palabra incorrecta";
             }
+        }
 
+
+        public bool arriesgarLetra(char letra)
+        {
+            if (char.IsLetter(letra))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public string validarLetra(char letra)
+        {
+            if (arriesgarLetra(letra))
+            {
+                if (palabraSecreta.Contains(char.ToLower(letra)))
+                {
+                    return "Acierto";
+                }
+                else
+                {
+                    return "Letra incorrecta";
+                }
+        }
+            else
+            {
+                return "Letra invalida";
+            }
         }
 
     }
