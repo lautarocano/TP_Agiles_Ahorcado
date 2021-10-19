@@ -88,7 +88,7 @@ namespace TestUnitarios
 
 
         [TestMethod]
-        public void ArriesgarLetraIncorrecta()
+        public void ValidarLetraIncorrecta()
         {
             JuegoAhorcado game = new JuegoAhorcado("Adios");
             game.setName("Martin");
@@ -96,7 +96,7 @@ namespace TestUnitarios
         }
 
         [TestMethod]
-        public void ArriesgarLetraCorrecta()
+        public void ValidarLetraCorrecta()
         {
             JuegoAhorcado game = new JuegoAhorcado("Adios");
             game.setName("Martin");
@@ -105,12 +105,24 @@ namespace TestUnitarios
 
 
         [TestMethod]
-        public void ArriesgarLetraCorrectaNoCaseSensitive()
+        public void ValidarLetraCorrectaNoCaseSensitive()
         {
             JuegoAhorcado game = new JuegoAhorcado("Adios");
             game.setName("Martin");
             Assert.AreEqual(game.validarLetra('D'), "Acierto");
         }
+
+
+        [TestMethod]
+        public void ValidarEstadoLetra()
+        {
+            JuegoAhorcado game = new JuegoAhorcado("Adios");
+            game.setName("Martin");
+            game.validarLetra('d');
+            Assert.AreEqual(game.mostrarEstado(), "_d___");
+        }
+
+
 
     }
 }
