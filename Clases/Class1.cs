@@ -9,14 +9,14 @@ namespace Clases
         public string nombreJugador;
         private string palabraSecreta;
         private string estadoPalabra;
-        char[] palabraAux;
+        public int intentosRestantes;
         char[] estadoAux;
         public JuegoAhorcado()
         {
             this.palabraSecreta = "hola";
             this.estadoPalabra = "____";
-            this.palabraAux = palabraSecreta.ToCharArray();
             this.estadoAux = estadoPalabra.ToCharArray();
+            this.intentosRestantes = 5;
         }
 
         public JuegoAhorcado(string palabraAsignada)
@@ -27,8 +27,8 @@ namespace Clases
             {
                 this.estadoPalabra += "_";
             }
-            this.palabraAux = palabraSecreta.ToCharArray();
             this.estadoAux = estadoPalabra.ToCharArray();
+            this.intentosRestantes = 5;
         }
 
 
@@ -95,6 +95,7 @@ namespace Clases
                 }
                 else
                 {
+                    intentosRestantes--;
                     return "Letra incorrecta";
                 }
             }

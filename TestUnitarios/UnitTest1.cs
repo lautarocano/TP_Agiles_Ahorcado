@@ -123,6 +123,41 @@ namespace TestUnitarios
         }
 
 
+        [TestMethod]
+        public void EstadoLetraDistintoLugar()
+        {
+            JuegoAhorcado game = new JuegoAhorcado("Adios");
+            game.setName("Martin");
+            game.validarLetra('d');
+            Assert.AreNotEqual(game.mostrarEstado(), "__d__");
+        }
+
+
+        [TestMethod]
+        public void UnIntentoMenos()
+        {
+            JuegoAhorcado game = new JuegoAhorcado("Adios");
+            game.setName("Martin");
+            game.validarLetra('e');
+            Assert.AreEqual(game.intentosRestantes, 4);
+        }
+        
+
+        [TestMethod]
+        public void NoRestaIntento()
+        {
+            JuegoAhorcado game = new JuegoAhorcado("Adios");
+            game.setName("Martin");
+            game.validarLetra('d');
+            Assert.AreEqual(game.intentosRestantes, 5);
+        }
+        
+
+
+
+
+
+
 
     }
 }
