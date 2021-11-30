@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Ahorcado
 {
@@ -10,13 +13,15 @@ namespace Ahorcado
         private string palabraSecreta;
         private string estadoPalabra;
         public int intentosRestantes;
-        char[] estadoAux;
+        public char[] estadoAux;
+        public List<char> letrasErradas;
         public Juego()
         {
             this.palabraSecreta = "hola";
             this.estadoPalabra = "____";
             this.estadoAux = estadoPalabra.ToCharArray();
             this.intentosRestantes = 5;
+            this.letrasErradas = new List<char>();
         }
 
         public Juego(string palabraAsignada)
@@ -29,6 +34,7 @@ namespace Ahorcado
             }
             this.estadoAux = estadoPalabra.ToCharArray();
             this.intentosRestantes = 5;
+            this.letrasErradas = new List<char>();
         }
 
 
@@ -96,6 +102,7 @@ namespace Ahorcado
                 else
                 {
                     intentosRestantes--;
+                    letrasErradas.Add(letra); //comprobar que no esté ya ingresada
                     return "Letra incorrecta";
                 }
             }
@@ -103,6 +110,15 @@ namespace Ahorcado
             {
                 return "Letra invalida";
             }
+        }
+
+        public bool checkearEstadoActual()
+        {
+            if (estadoAux.Contains('_')) return false;
+            else return true;
+
+
+
         }
 
         public string mostrarEstado()

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net4.5.2</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -14,8 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Desktop\UI AGILES\Ahorcado\Ahorcado\Ahorcado.csproj" />
-    <ProjectReference Include="..\Clases\Ahorcado.csproj" />
+    <ProjectReference Include="..\Ahorcado\Ahorcado.csproj" />
   </ItemGroup>
 
 </Project>

@@ -84,10 +84,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ahorcado.MVC\Ahorcado.MVC.csproj">
-      <Project>{a49f3f0b-e028-4e0e-9b49-7e91f665979f}</Project>
-      <Name>Ahorcado.MVC</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Ahorcado\Ahorcado.csproj">
       <Project>{9a70ca2b-4eec-4859-acaf-57d33cf34a59}</Project>
       <Name>Ahorcado</Name>
@@ -97,9 +93,6 @@
     <Content Include="Drivers\IEDriverServer.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

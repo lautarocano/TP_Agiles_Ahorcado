@@ -11,7 +11,7 @@ namespace TestUnitarios
         {
             Juego game = new Juego();
             string nombre = "";
-            Assert.AreEqual(game.setName(nombre),"Nombre invalido");
+            Assert.AreEqual(game.setName(nombre), "Nombre invalido");
         }
 
         [TestMethod]
@@ -141,7 +141,7 @@ namespace TestUnitarios
             game.validarLetra('e');
             Assert.AreEqual(game.intentosRestantes, 4);
         }
-        
+
 
         [TestMethod]
         public void NoRestaIntento()
@@ -151,10 +151,6 @@ namespace TestUnitarios
             game.validarLetra('d');
             Assert.AreEqual(game.intentosRestantes, 5);
         }
-        
-
-
-
 
 
 
