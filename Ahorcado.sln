@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ahorcado", "Clases\Ahorcado
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestUnitarios", "TestUnitarios\TestUnitarios.csproj", "{0F015094-AA7A-4803-822A-9D27E3AC3B9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ahorcado.MVC", "..\..\..\Desktop\UI AGILES\Ahorcado\Ahorcado.MVC\Ahorcado.MVC.csproj", "{A49F3F0B-E028-4E0E-9B49-7E91F665979F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ahorcado.MVC", "Ahorcado.MVC\Ahorcado.MVC.csproj", "{A49F3F0B-E028-4E0E-9B49-7E91F665979F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ahorcado.UIAutomation", "..\..\..\Desktop\UI AGILES\Ahorcado\Ahorcado.UIAutomation\Ahorcado.UIAutomation.csproj", "{2365BAF0-EB92-48F5-9392-8A5C397A9512}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ahorcado.UIAutomation", "Ahorcado.UIAutomation\Ahorcado.UIAutomation.csproj", "{2365BAF0-EB92-48F5-9392-8A5C397A9512}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
