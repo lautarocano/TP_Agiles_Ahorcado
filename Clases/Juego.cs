@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-namespace Clases
+namespace Ahorcado
 {
-    public class JuegoAhorcado
+    public class Juego
     {
 
         public string nombreJugador;
@@ -11,7 +11,7 @@ namespace Clases
         private string estadoPalabra;
         public int intentosRestantes;
         char[] estadoAux;
-        public JuegoAhorcado()
+        public Juego()
         {
             this.palabraSecreta = "hola";
             this.estadoPalabra = "____";
@@ -19,7 +19,7 @@ namespace Clases
             this.intentosRestantes = 5;
         }
 
-        public JuegoAhorcado(string palabraAsignada)
+        public Juego(string palabraAsignada)
         {
             this.palabraSecreta = palabraAsignada.ToLower();
             this.estadoPalabra = "";
